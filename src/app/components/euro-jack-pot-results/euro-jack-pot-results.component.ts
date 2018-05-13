@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EuroJackpotService } from '../../services/euro-jackpot.service';
 
 @Component({
   selector: 'app-euro-jack-pot-results',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EuroJackPotResultsComponent implements OnInit {
 
-  constructor() { }
+  euroJackPot;
+
+  constructor(private euroJackpotService: EuroJackpotService) {}
 
   ngOnInit() {
+    this.euroJackpotService.latestWinnerNumber().subscribe( res => {
+      console.log(res);
+      this.euroJackPot = res.last;
+    });
   }
 
 }
