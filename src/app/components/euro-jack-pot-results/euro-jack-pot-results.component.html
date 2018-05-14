@@ -2,7 +2,7 @@
 <hr>
 
 <div>
-    <strong>EuroJackpot</strong> Results for {{ euroJackPot?.date.dayOfWeek }} {{ euroJackPot?.date.day}} {{ euroJackPot?.date.month }} {{ euroJackPot?.date.year}}
+    <strong>EuroJackpot</strong> Results for {{ euroJackPot?.date | date: 'EEEE dd MMMM y'}}
     <div>
         <ul class="result-numbers-container">
             <li *ngFor="let number of euroJackPot?.numbers" class="winnner-number">{{ number }}</li>

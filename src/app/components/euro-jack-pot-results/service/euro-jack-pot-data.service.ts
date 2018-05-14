@@ -13,7 +13,7 @@ export class EuroJackPotDataService {
     return this.euroJackPotService.latestWinnerNumber().map( (response: any) => {
       const euroJackPot: EuroJackPot = new EuroJackPot();
       euroJackPot.currency = response.last.currency;
-      euroJackPot.date = new Date(response.last.date.full);
+      euroJackPot.date = new Date(response.last.date.year, response.last.date.month - 1, response.last.date.day);
       euroJackPot.euroNumbers = response.last.euroNumbers;
       euroJackPot.numbers = response.last.numbers;
       euroJackPot.odds = response.last.odds;
