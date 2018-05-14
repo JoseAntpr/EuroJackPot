@@ -6,8 +6,7 @@
     <div>
         <ul class="result-numbers-container">
             <li *ngFor="let number of euroJackPot?.numbers" class="winnner-number">{{ number }}</li>
-            <li *ngFor="let number of euroJackPot?.euroNumbers" class="winnner-number euronumber">5</li>
-            <li class="winnner-number euronumber">10</li>
+            <li *ngFor="let number of euroJackPot?.euroNumbers" class="winnner-number euronumber">{{ number}}</li>
         </ul>
     </div>
 </div>
@@ -31,67 +30,67 @@
             <th scope="row">II</th>
             <td>5 Numbers + 1 EuroNumbers</td>
             <td>{{ euroJackPot?.odds.rank2.winners | number }}x</td>
-            <td>€{{ euroJackPot?.odds.rank2.prize | currency:euroJackPot?.currency}}</td>
+            <td>{{ euroJackPot?.odds.rank2.prize | currency:euroJackPot?.currency}}</td>
         </tr>
         <tr>
             <th scope="row">III</th>
             <td>5 Numbers + 0 EuroNumbers</td>
             <td>{{ euroJackPot?.odds.rank3.winners | number }}x</td>
-            <td>€{{ euroJackPot?.odds.rank3.prize | currency:euroJackPot?.currency}}</td>
+            <td>{{ euroJackPot?.odds.rank3.prize | currency:euroJackPot?.currency}}</td>
         </tr>
         <tr>
             <th scope="row">IV</th>
             <td>4 Numbers + 2 EuroNumbers</td>
             <td>{{ euroJackPot?.odds.rank4.winners | number }}x</td>
-            <td>€{{ euroJackPot?.odds.rank4.prize | currency:euroJackPot?.currency}}</td>
+            <td>{{ euroJackPot?.odds.rank4.prize | currency:euroJackPot?.currency}}</td>
         </tr>
         <tr>
             <th scope="row">V</th>
             <td>4 Numbers + 1 EuroNumbers</td>
             <td>{{ euroJackPot?.odds.rank5.winners | number }}x</td>
-            <td>€{{ euroJackPot?.odds.rank5.prize | currency:euroJackPot?.currency}}</td>
+            <td>{{ euroJackPot?.odds.rank5.prize | currency:euroJackPot?.currency}}</td>
         </tr>
         <tr>
             <th scope="row">VI</th>
             <td>4 Numbers + 0 EuroNumbers</td>
             <td>{{ euroJackPot?.odds.rank6.winners | number }}x</td>
-            <td>€{{ euroJackPot?.odds.rank6.prize | currency:euroJackPot?.currency}}</td>
+            <td>{{ euroJackPot?.odds.rank6.prize | currency:euroJackPot?.currency}}</td>
         </tr>
         <tr>
             <th scope="row">VII</th>
             <td>3 Numbers + 2 EuroNumbers</td>
             <td>{{ euroJackPot?.odds.rank7.winners | number }}x</td>
-            <td>€{{ euroJackPot?.odds.rank7.prize | currency:euroJackPot?.currency}}</td>
+            <td>{{ euroJackPot?.odds.rank7.prize | currency:euroJackPot?.currency}}</td>
         </tr>
         <tr>
             <th scope="row">VII</th>
             <td>3 Numbers + 1 EuroNumbers</td>
             <td>{{ euroJackPot?.odds.rank8.winners | number }}x</td>
-            <td>€{{ euroJackPot?.odds.rank8.prize | currency:euroJackPot?.currency}}</td>
+            <td>{{ euroJackPot?.odds.rank8.prize | currency:euroJackPot?.currency}}</td>
         </tr>
         <tr>
             <th scope="row">IX</th>
             <td>3 Numbers + 0 EuroNumbers</td>
             <td>{{ euroJackPot?.odds.rank9.winners | number }}x</td>
-            <td>€{{ euroJackPot?.odds.rank9.prize | currency:euroJackPot?.currency}}</td>
+            <td>{{ euroJackPot?.odds.rank9.prize | currency:euroJackPot?.currency}}</td>
         </tr>
         <tr>
             <th scope="row">X</th>
             <td>1 Numbers + 2 EuroNumbers</td>
             <td>{{ euroJackPot?.odds.rank10.winners | number }}x</td>
-            <td>€{{ euroJackPot?.odds.rank10.prize | currency:euroJackPot?.currency}}</td>
+            <td>{{ euroJackPot?.odds.rank10.prize | currency:euroJackPot?.currency}}</td>
         </tr>
         <tr>
             <th scope="row">XI</th>
             <td>2 Numbers + 1 EuroNumbers</td>
             <td>{{ euroJackPot?.odds.rank11.winners | number }}x</td>
-            <td>€{{ euroJackPot?.odds.rank11.prize | currency:euroJackPot?.currency}}</td>
+            <td>{{ euroJackPot?.odds.rank11.prize | currency:euroJackPot?.currency}}</td>
         </tr>
         <tr>
             <th scope="row">XII</th>
             <td>5 Numbers + 2 EuroNumbers</td>
             <td>{{ euroJackPot?.odds.rank12.winners | number }}x</td>
-            <td>€{{ euroJackPot?.odds.rank12.prize | currency:euroJackPot?.currency}}</td>
+            <td>{{ euroJackPot?.odds.rank12.prize | currency:euroJackPot?.currency}}</td>
         </tr>
 
     </tbody>

@@ -13,7 +13,7 @@ export class EuroJackPotResultsComponent implements OnInit {
   constructor(private euroJackpotService: EuroJackpotService) {}
 
   ngOnInit() {
-    this.euroJackpotService.latestWinnerNumber().subscribe( res => {
+    this.euroJackpotService.latestWinnerNumber().subscribe( (res: any) => {
       console.log(res);
       this.euroJackPot = res.last;
     });
