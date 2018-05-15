@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { EuroJackpotService } from '../../services/euro-jackpot.service';
 import { Subscription } from 'rxjs/Subscription';
-import { EuroJackPotDataService } from './service/euro-jack-pot-data.service';
+import { EuroJackPotService } from '../../services/eurojackpot.service';
+
 
 @Component({
   selector: 'app-euro-jack-pot-results',
@@ -13,7 +13,7 @@ export class EuroJackPotResultsComponent implements OnInit, OnDestroy {
   euroJackPot;
   subscription: Subscription;
 
-  constructor(private euroJackpotService: EuroJackPotDataService) {}
+  constructor(private euroJackpotService: EuroJackPotService) {}
 
   ngOnInit() {
     this.subscription = this.euroJackpotService.getEuroJackPotData().subscribe( (res: any) => {
