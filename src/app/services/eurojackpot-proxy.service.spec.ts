@@ -1,20 +1,21 @@
 import { TestBed, inject, async } from '@angular/core/testing';
-
-import { EuroJackpotService } from './euro-jackpot.service';
+import { HttpClientModule } from '@angular/common/http';
+import { EuroJackpotProxyService } from './/eurojackpot-proxy.service';
 
 describe('EuroJackpotService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [EuroJackpotService]
+      imports: [HttpClientModule],
+      providers: [EuroJackpotProxyService]
     });
   });
 
-  it('should be created', inject([EuroJackpotService], (service: EuroJackpotService) => {
+  it('should be created', inject([EuroJackpotProxyService], (service: EuroJackpotProxyService) => {
     expect(service).toBeTruthy();
   }));
 
-  it('should get users', async(() => {
-    const service: EuroJackpotService = TestBed.get(EuroJackpotService);
+  it('should get users from server', async(() => {
+    const service: EuroJackpotProxyService = TestBed.get(EuroJackpotProxyService);
     service.latestWinnerNumber().subscribe(
       (response) => expect(response).not.toBeNull(),
       (error) => fail(error)
