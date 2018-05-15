@@ -1,6 +1,6 @@
 import { TestBed, inject, async } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
-import { EuroJackpotProxyService } from './/eurojackpot-proxy.service';
+import { EuroJackpotProxyService } from './eurojackpot-proxy.service';
 
 describe('EuroJackpotService', () => {
   beforeEach(() => {

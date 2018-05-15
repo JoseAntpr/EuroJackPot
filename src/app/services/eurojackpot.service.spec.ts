@@ -10,24 +10,19 @@ describe('EuroJackPotService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [
+        EuroJackPotService,
         {
-          provide: EuroJackPotService,
-          useClass: EuroJackPotService,
-          deps: [
-            {
-              provide: EuroJackpotProxyService,
-              useClass: EuroJackpotProxyServiceFake
-            }
-          ]
+          provide: EuroJackpotProxyService,
+          useClass: EuroJackpotProxyServiceFake
         }]
     });
   });
 
-  xit('should be created', inject([EuroJackPotService], (service: EuroJackPotService) => {
+  it('should be created', inject([EuroJackPotService], (service: EuroJackPotService) => {
     expect(service).toBeTruthy();
   }));
 
-  xit('should get euroJackpot', () => {
+  it('should get euroJackpot', () => {
     const service: EuroJackPotService = TestBed.get(EuroJackPotService);
     service.getEuroJackPotData().subscribe( (response: EuroJackPot) => {
       expect(response.currency).toEqual('EUR');
