@@ -13,7 +13,6 @@ export class EuroJackPotService {
   getEuroJackPotData(): Observable<EuroJackPot> {
     return this.euroJackPotProxyService.latestWinnerNumber().map( (response: any) => {
       const euroJackPot: EuroJackPot = new EuroJackPot();
-      console.log(response);
       euroJackPot.currency = response.last.currency;
       euroJackPot.date = new Date(response.last.date.year, response.last.date.month - 1, response.last.date.day);
       euroJackPot.euroNumbers = response.last.euroNumbers;

@@ -7,7 +7,7 @@ import { EuroJackPotService } from './services/eurojackpot.service';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { EuroJackPotResultsComponent } from './components/euro-jack-pot-results/euro-jack-pot-results.component';
+import { EuroJackPotResultsComponent } from './components/eurojackpot-results/eurojackpot-results.component';
 
 
 
