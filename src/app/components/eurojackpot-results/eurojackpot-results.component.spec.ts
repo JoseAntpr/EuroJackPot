@@ -32,7 +32,7 @@ describe('EuroJackPotResultsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('', () => {
+  it('prueba', () => {
     component.ngOnInit();
   });
 
