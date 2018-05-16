@@ -14,6 +14,8 @@ After you need to install all dependencias when you stay in the project director
 npm install 
 ``` 
 
+Also I need a plugin to my browser for CORS and Proxy. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. Or you can 
