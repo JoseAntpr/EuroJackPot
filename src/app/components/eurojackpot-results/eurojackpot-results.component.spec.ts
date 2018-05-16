@@ -32,9 +32,6 @@ describe('EuroJackPotResultsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('prueba', () => {
-    component.ngOnInit();
-  });
 
   it('should have 7 ball numbers', () => {
     const balls = fixture.debugElement.nativeElement.querySelectorAll('.winnner-number');
