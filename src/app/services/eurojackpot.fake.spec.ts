@@ -1,3 +1,4 @@
+/* Test object for dumb service */
 export const EUROJACKPOT_FAKE = {
     'last': {
         'nr': 321,

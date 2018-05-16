@@ -1,7 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
+
+// Services
 import { EuroJackPotService } from '../../services/eurojackpot.service';
+
+// Models
 import { EuroJackPot } from '../../models/euro-jack-pot';
+
+// rxjs imports
+import { Subscription } from 'rxjs/Subscription';
 
 
 @Component({
@@ -17,12 +23,12 @@ export class EuroJackPotResultsComponent implements OnInit, OnDestroy {
   constructor(private euroJackpotService: EuroJackPotService) {}
 
   ngOnInit() {
-    this.subscription = this.euroJackpotService.getEuroJackPotData().subscribe( (res: EuroJackPot) => {
-      this.euroJackPot = res;
+    this.subscription = this.euroJackpotService.getEuroJackPotData().subscribe( (lastEurojackpot: EuroJackPot) => {
+      this.euroJackPot = lastEurojackpot;
     });
 
   }
-
+  /* Unsubscribe the Observable to avoid memory leaks */
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

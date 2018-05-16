@@ -1,4 +1,6 @@
 import { EUROJACKPOT_FAKE } from './eurojackpot.fake.spec';
+
+// rxjs imports
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 

@@ -1,8 +1,15 @@
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map';
-import { Observable } from 'rxjs/Observable';
+
+// Model
 import { EuroJackPot } from '../models/euro-jack-pot';
+
+// Services
 import { EuroJackpotProxyService } from './eurojackpot-proxy.service';
+
+// rxjs imports
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import { last } from '@angular/router/src/utils/collection';
 
 
 @Injectable()
@@ -13,11 +20,12 @@ export class EuroJackPotService {
   getEuroJackPotData(): Observable<EuroJackPot> {
     return this.euroJackPotProxyService.latestWinnerNumber().map( (response: any) => {
       const euroJackPot: EuroJackPot = new EuroJackPot();
-      euroJackPot.currency = response.last.currency;
-      euroJackPot.date = new Date(response.last.date.year, response.last.date.month - 1, response.last.date.day);
-      euroJackPot.euroNumbers = response.last.euroNumbers;
-      euroJackPot.numbers = response.last.numbers;
-      euroJackPot.odds = response.last.odds;
+      const {currency, date, euroNumbers, odds, numbers } = response.last;
+      euroJackPot.currency = currency;
+      euroJackPot.date = new Date(date.year, date.month - 1, date.day);
+      euroJackPot.euroNumbers = euroNumbers;
+      euroJackPot.numbers = numbers;
+      euroJackPot.odds = odds;
       return euroJackPot;
     });
   }

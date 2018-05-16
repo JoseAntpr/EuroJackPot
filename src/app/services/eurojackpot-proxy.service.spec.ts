@@ -14,6 +14,7 @@ describe('EuroJackpotService', () => {
     expect(service).toBeTruthy();
   }));
 
+  /* Test if the service receive an error or a observable response. */
   it('should get users from server', async(() => {
     const service: EuroJackpotProxyService = TestBed.get(EuroJackpotProxyService);
     service.latestWinnerNumber().subscribe(
